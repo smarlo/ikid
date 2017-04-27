@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,12 +20,11 @@
                         <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Gt-Pk-MIx">
-                                <rect key="frame" x="298.5" y="559.5" width="60" height="50.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Gt-Pk-MIx">
+                                <rect key="frame" x="240" y="391" width="64" height="40"/>
                                 <color key="backgroundColor" name="alternateSelectedControlColor" catalog="System" colorSpace="catalog"/>
                                 <state key="normal" title="Next">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -32,15 +33,23 @@
                                     <action selector="getGoodPunchline:" destination="9pv-A4-QxB" eventType="touchUpInside" id="ymM-xp-mjj"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Insert Good Joke" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gh9-CZ-Pks">
-                                <rect key="frame" x="25.5" y="245.5" width="322.5" height="175.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="insert good joke" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gh9-CZ-Pks">
+                                <rect key="frame" x="22" y="20" width="275" height="440.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="8Gt-Pk-MIx" firstAttribute="height" secondItem="tsR-hK-woN" secondAttribute="height" multiplier="1/12" id="7zV-3D-4sf"/>
+                            <constraint firstItem="Gh9-CZ-Pks" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" id="ESK-Zw-Zbe"/>
+                            <constraint firstItem="Gh9-CZ-Pks" firstAttribute="width" secondItem="tsR-hK-woN" secondAttribute="width" id="RlX-dV-taM"/>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="8Gt-Pk-MIx" secondAttribute="bottom" id="TS0-au-nXp"/>
+                            <constraint firstItem="Gh9-CZ-Pks" firstAttribute="height" secondItem="tsR-hK-woN" secondAttribute="height" multiplier="11/12" id="bJ6-4m-1n0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8Gt-Pk-MIx" secondAttribute="trailing" id="eeV-gt-XIK"/>
+                            <constraint firstItem="8Gt-Pk-MIx" firstAttribute="width" secondItem="tsR-hK-woN" secondAttribute="width" multiplier="1/5" id="oIa-dW-uZJ"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Good" image="first" id="acW-dT-cKf"/>
                     <connections>
@@ -61,12 +70,11 @@
                         <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y4r-aX-mf3">
-                                <rect key="frame" x="298.5" y="559.5" width="60" height="50.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y4r-aX-mf3">
+                                <rect key="frame" x="240" y="391" width="64" height="40"/>
                                 <color key="backgroundColor" name="alternateSelectedControlColor" catalog="System" colorSpace="catalog"/>
                                 <state key="normal" title="Next">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -75,15 +83,22 @@
                                     <action selector="getPunPunchline:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="pIn-gx-045"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Insert Pun Joke" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2xy-gs-T7k">
-                                <rect key="frame" x="64.5" y="291" width="245" height="83.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="insert pun joke" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2xy-gs-T7k">
+                                <rect key="frame" x="55" y="209.5" width="209" height="60"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="y4r-aX-mf3" secondAttribute="bottom" id="0JA-LC-wNo"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="y4r-aX-mf3" secondAttribute="trailing" id="C4D-es-SOm"/>
+                            <constraint firstItem="y4r-aX-mf3" firstAttribute="width" secondItem="QS5-Rx-YEW" secondAttribute="width" multiplier="1/5" id="EyP-RZ-AqF"/>
+                            <constraint firstItem="2xy-gs-T7k" firstAttribute="width" secondItem="QS5-Rx-YEW" secondAttribute="width" id="K8s-KJ-7sW"/>
+                            <constraint firstItem="y4r-aX-mf3" firstAttribute="height" secondItem="QS5-Rx-YEW" secondAttribute="height" multiplier="1/12" id="m3F-pm-gLk"/>
+                            <constraint firstItem="2xy-gs-T7k" firstAttribute="height" secondItem="QS5-Rx-YEW" secondAttribute="height" multiplier="11/12" id="wp0-ZI-BIE"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Pun" image="second" id="cPa-gy-q4n"/>
                     <connections>
@@ -104,27 +119,35 @@
                         <viewControllerLayoutGuide type="bottom" id="dmB-qp-6TV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="dcj-uU-rUH">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Insert Dad Joke " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E3H-cF-iTH">
-                                <rect key="frame" x="43.5" y="283" width="286.5" height="100.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="insert dad joke " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E3H-cF-iTH">
+                                <rect key="frame" x="37" y="203.5" width="244.5" height="72.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ub8-zX-aDh">
-                                <rect key="frame" x="298.5" y="559.5" width="60" height="50.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ub8-zX-aDh">
+                                <rect key="frame" x="240" y="390.5" width="64" height="40"/>
                                 <color key="backgroundColor" name="alternateSelectedControlColor" catalog="System" colorSpace="catalog"/>
-                                <state key="normal" title="Next"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="getDadPunchLine:" destination="0ZW-3m-lLI" eventType="touchUpInside" id="6j7-Tp-p45"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="E3H-cF-iTH" firstAttribute="width" secondItem="dcj-uU-rUH" secondAttribute="width" id="39Q-hH-W3L"/>
+                            <constraint firstItem="ub8-zX-aDh" firstAttribute="width" secondItem="dcj-uU-rUH" secondAttribute="width" multiplier="1/5" id="4jB-xu-rC1"/>
+                            <constraint firstItem="dmB-qp-6TV" firstAttribute="top" secondItem="ub8-zX-aDh" secondAttribute="bottom" id="Pfw-6m-Ug4"/>
+                            <constraint firstItem="E3H-cF-iTH" firstAttribute="height" secondItem="dcj-uU-rUH" secondAttribute="height" multiplier="11/12" id="SJO-Jc-vco"/>
+                            <constraint firstItem="ub8-zX-aDh" firstAttribute="height" secondItem="dcj-uU-rUH" secondAttribute="height" multiplier="1/12" id="mAe-YX-GaI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ub8-zX-aDh" secondAttribute="trailing" id="rjt-fr-toB"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Dad" id="0eI-mX-z9G"/>
                     <connections>
