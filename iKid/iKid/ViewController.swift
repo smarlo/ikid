@@ -55,11 +55,23 @@ class ViewController: UIViewController {
         sender.setTitle("", for: UIControlState.normal)
         if(self.knockKnockCount == 1) {
             UIView.transition(with: self.knockKnockView, duration: 0.5, options: UIViewAnimationOptions.transitionFlipFromLeft, animations: nil, completion: {(_ : Bool) -> Void in
-                self.knockKnockLabel.text = "Cow's go"
-                sender.setTitle("Cow's go who?", for: UIControlState.normal)
+                self.knockKnockLabel.text = "Who's there?"
+                sender.setTitle("Next", for: UIControlState.normal)
             })
             self.knockKnockCount += 1
         } else if (self.knockKnockCount == 2) {
+            UIView.transition(with: self.knockKnockView, duration: 0.5, options: UIViewAnimationOptions.transitionFlipFromLeft, animations: nil, completion: {(_ : Bool) -> Void in
+                self.knockKnockLabel.text = "Cow's go"
+                sender.setTitle("Next", for: UIControlState.normal)
+            })
+            self.knockKnockCount += 1
+        } else if (self.knockKnockCount == 3) {
+            UIView.transition(with: self.knockKnockView, duration: 0.5, options: UIViewAnimationOptions.transitionFlipFromLeft, animations: nil, completion: {(_ : Bool) -> Void in
+                self.knockKnockLabel.text = "Cow's go who?"
+                sender.setTitle("Next", for: UIControlState.normal)
+            })
+            self.knockKnockCount += 1
+        } else if (self.knockKnockCount == 4) {
             UIView.transition(with: self.knockKnockView, duration: 0.5, options: UIViewAnimationOptions.transitionFlipFromLeft, animations: nil, completion: {(_ : Bool) -> Void in
                 self.knockKnockLabel.text = "No silly, cows go MOO"
                 sender.setTitle("Back", for: UIControlState.normal)
@@ -68,7 +80,7 @@ class ViewController: UIViewController {
         } else {
             UIView.transition(with: self.knockKnockView, duration: 0.5, options: UIViewAnimationOptions.transitionFlipFromRight, animations: nil, completion: {(_ : Bool) -> Void in
                 self.knockKnockLabel.text = "Knock Knock"
-                sender.setTitle("Who's there?", for: UIControlState.normal)
+                sender.setTitle("Next", for: UIControlState.normal)
             })
             self.knockKnockCount = 1
         }

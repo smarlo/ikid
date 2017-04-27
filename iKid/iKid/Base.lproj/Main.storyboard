@@ -43,10 +43,9 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="8Gt-Pk-MIx" firstAttribute="height" secondItem="tsR-hK-woN" secondAttribute="height" multiplier="1/12" id="7zV-3D-4sf"/>
-                            <constraint firstItem="Gh9-CZ-Pks" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" id="ESK-Zw-Zbe"/>
                             <constraint firstItem="Gh9-CZ-Pks" firstAttribute="width" secondItem="tsR-hK-woN" secondAttribute="width" id="RlX-dV-taM"/>
                             <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="8Gt-Pk-MIx" secondAttribute="bottom" id="TS0-au-nXp"/>
-                            <constraint firstItem="Gh9-CZ-Pks" firstAttribute="height" secondItem="tsR-hK-woN" secondAttribute="height" multiplier="11/12" id="bJ6-4m-1n0"/>
+                            <constraint firstItem="Gh9-CZ-Pks" firstAttribute="height" secondItem="tsR-hK-woN" secondAttribute="height" id="bJ6-4m-1n0"/>
                             <constraint firstAttribute="trailingMargin" secondItem="8Gt-Pk-MIx" secondAttribute="trailing" id="eeV-gt-XIK"/>
                             <constraint firstItem="8Gt-Pk-MIx" firstAttribute="width" secondItem="tsR-hK-woN" secondAttribute="width" multiplier="1/5" id="oIa-dW-uZJ"/>
                         </constraints>
@@ -97,7 +96,7 @@
                             <constraint firstItem="y4r-aX-mf3" firstAttribute="width" secondItem="QS5-Rx-YEW" secondAttribute="width" multiplier="1/5" id="EyP-RZ-AqF"/>
                             <constraint firstItem="2xy-gs-T7k" firstAttribute="width" secondItem="QS5-Rx-YEW" secondAttribute="width" id="K8s-KJ-7sW"/>
                             <constraint firstItem="y4r-aX-mf3" firstAttribute="height" secondItem="QS5-Rx-YEW" secondAttribute="height" multiplier="1/12" id="m3F-pm-gLk"/>
-                            <constraint firstItem="2xy-gs-T7k" firstAttribute="height" secondItem="QS5-Rx-YEW" secondAttribute="height" multiplier="11/12" id="wp0-ZI-BIE"/>
+                            <constraint firstItem="2xy-gs-T7k" firstAttribute="height" secondItem="QS5-Rx-YEW" secondAttribute="height" id="wp0-ZI-BIE"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Pun" image="second" id="cPa-gy-q4n"/>
@@ -144,7 +143,7 @@
                             <constraint firstItem="E3H-cF-iTH" firstAttribute="width" secondItem="dcj-uU-rUH" secondAttribute="width" id="39Q-hH-W3L"/>
                             <constraint firstItem="ub8-zX-aDh" firstAttribute="width" secondItem="dcj-uU-rUH" secondAttribute="width" multiplier="1/5" id="4jB-xu-rC1"/>
                             <constraint firstItem="dmB-qp-6TV" firstAttribute="top" secondItem="ub8-zX-aDh" secondAttribute="bottom" id="Pfw-6m-Ug4"/>
-                            <constraint firstItem="E3H-cF-iTH" firstAttribute="height" secondItem="dcj-uU-rUH" secondAttribute="height" multiplier="11/12" id="SJO-Jc-vco"/>
+                            <constraint firstItem="E3H-cF-iTH" firstAttribute="height" secondItem="dcj-uU-rUH" secondAttribute="height" id="SJO-Jc-vco"/>
                             <constraint firstItem="ub8-zX-aDh" firstAttribute="height" secondItem="dcj-uU-rUH" secondAttribute="height" multiplier="1/12" id="mAe-YX-GaI"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ub8-zX-aDh" secondAttribute="trailing" id="rjt-fr-toB"/>
                         </constraints>
@@ -172,18 +171,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2rw-ia-JVn">
-                                <rect key="frame" x="209" y="562" width="150" height="55.5"/>
+                                <rect key="frame" x="284" y="562" width="75" height="55.5"/>
                                 <color key="backgroundColor" name="alternateSelectedControlColor" catalog="System" colorSpace="catalog"/>
-                                <state key="normal" title="Who's there?">
+                                <state key="normal" title="Next">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="knockKnockJoke:" destination="2Uh-Tx-hba" eventType="touchUpInside" id="a5M-Jw-sdc"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Knock Knock" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ycz-Pt-7hH">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Knock Knock" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ycz-Pt-7hH">
                                 <rect key="frame" x="0.0" y="12" width="375" height="598"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -191,15 +190,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="2rw-ia-JVn" firstAttribute="height" secondItem="lGq-76-fk4" secondAttribute="height" multiplier="1/12" id="6gr-Wm-WD7"/>
-                            <constraint firstItem="ycz-Pt-7hH" firstAttribute="height" secondItem="lGq-76-fk4" secondAttribute="height" multiplier="11/12" id="82R-N3-Q3W"/>
-                            <constraint firstItem="2rw-ia-JVn" firstAttribute="width" secondItem="lGq-76-fk4" secondAttribute="width" multiplier="2/5" id="Kgj-Tr-fth"/>
-                            <constraint firstItem="ycz-Pt-7hH" firstAttribute="top" secondItem="deg-O8-fRy" secondAttribute="bottom" id="W5J-RT-wXX"/>
+                            <constraint firstItem="2rw-ia-JVn" firstAttribute="width" secondItem="lGq-76-fk4" secondAttribute="width" multiplier="1/5" id="Kgj-Tr-fth"/>
                             <constraint firstItem="bkm-3j-JLV" firstAttribute="top" secondItem="2rw-ia-JVn" secondAttribute="bottom" id="WwC-y8-qiR"/>
-                            <constraint firstItem="ycz-Pt-7hH" firstAttribute="width" secondItem="lGq-76-fk4" secondAttribute="width" id="YBs-ET-LNM"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ycz-Pt-7hH" secondAttribute="trailing" id="if8-rY-4Iy"/>
+                            <constraint firstItem="ycz-Pt-7hH" firstAttribute="width" secondItem="lGq-76-fk4" secondAttribute="width" id="lX3-gi-0Fi"/>
+                            <constraint firstItem="ycz-Pt-7hH" firstAttribute="height" secondItem="lGq-76-fk4" secondAttribute="height" id="o41-zz-s86"/>
                             <constraint firstItem="2rw-ia-JVn" firstAttribute="trailing" secondItem="lGq-76-fk4" secondAttribute="trailingMargin" id="rYq-5y-c07"/>
-                            <constraint firstItem="ycz-Pt-7hH" firstAttribute="leading" secondItem="lGq-76-fk4" secondAttribute="leadingMargin" id="tRR-4h-fb3"/>
-                            <constraint firstItem="bkm-3j-JLV" firstAttribute="top" secondItem="ycz-Pt-7hH" secondAttribute="bottom" id="xcN-gK-nbj"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Knock Knock" id="8ij-Po-rWD"/>
