@@ -33,17 +33,17 @@ class ViewController: UIViewController {
     }
     
     @IBAction func getGoodPunchline(_ sender: UIButton) {
-        jokeSwitch(switched: self.goodSwitched, view: goodView, label: goodLabel, button: sender, joke: "insert good joke", punchline: "insert punchline")
+        jokeSwitch(switched: self.goodSwitched, view: goodView, label: goodLabel, button: sender, joke: "What's a pirate's least favorite letter?", punchline: "Dear sir,\n Your internet access has been terminated due to illegal usage.\n Sincerely, your service provider.")
         self.goodSwitched = !self.goodSwitched
     }
     
     @IBAction func getPunPunchline(_ sender: UIButton) {
-        jokeSwitch(switched: self.punSwitched, view: punView, label: punLabel, button: sender, joke: "insert pun joke", punchline: "insert punchline")
+        jokeSwitch(switched: self.punSwitched, view: punView, label: punLabel, button: sender, joke: "There was an explosion at a cheese factory in France.", punchline: "De Brie everywhere")
         self.punSwitched = !self.punSwitched
     }
     
     @IBAction func getDadPunchLine(_ sender: UIButton) {
-        jokeSwitch(switched: self.dadSwitched, view: dadView, label: dadLabel, button: sender, joke: "insert dad joke", punchline: "insert punchline")
+        jokeSwitch(switched: self.dadSwitched, view: dadView, label: dadLabel, button: sender, joke: "Why do chicken coops only have two doors?", punchline: "Because if they had four, they would be chicken sedans!")
         self.dadSwitched = !self.dadSwitched
     }
     
