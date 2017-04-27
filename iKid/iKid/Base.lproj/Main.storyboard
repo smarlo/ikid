@@ -159,6 +159,59 @@
             </objects>
             <point key="canvasLocation" x="1452" y="0.0"/>
         </scene>
+        <!--Knock Knock-->
+        <scene sceneID="ZHH-OS-bmN">
+            <objects>
+                <viewController title="Knock Knock" id="2Uh-Tx-hba" customClass="ViewController" customModule="iKid" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="deg-O8-fRy"/>
+                        <viewControllerLayoutGuide type="bottom" id="bkm-3j-JLV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lGq-76-fk4" userLabel="Knock Knock VIew">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2rw-ia-JVn">
+                                <rect key="frame" x="209" y="562" width="150" height="55.5"/>
+                                <color key="backgroundColor" name="alternateSelectedControlColor" catalog="System" colorSpace="catalog"/>
+                                <state key="normal" title="Who's there?">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="knockKnockJoke:" destination="2Uh-Tx-hba" eventType="touchUpInside" id="a5M-Jw-sdc"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Knock Knock" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ycz-Pt-7hH">
+                                <rect key="frame" x="0.0" y="12" width="375" height="598"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2rw-ia-JVn" firstAttribute="height" secondItem="lGq-76-fk4" secondAttribute="height" multiplier="1/12" id="6gr-Wm-WD7"/>
+                            <constraint firstItem="ycz-Pt-7hH" firstAttribute="height" secondItem="lGq-76-fk4" secondAttribute="height" multiplier="11/12" id="82R-N3-Q3W"/>
+                            <constraint firstItem="2rw-ia-JVn" firstAttribute="width" secondItem="lGq-76-fk4" secondAttribute="width" multiplier="2/5" id="Kgj-Tr-fth"/>
+                            <constraint firstItem="ycz-Pt-7hH" firstAttribute="top" secondItem="deg-O8-fRy" secondAttribute="bottom" id="W5J-RT-wXX"/>
+                            <constraint firstItem="bkm-3j-JLV" firstAttribute="top" secondItem="2rw-ia-JVn" secondAttribute="bottom" id="WwC-y8-qiR"/>
+                            <constraint firstItem="ycz-Pt-7hH" firstAttribute="width" secondItem="lGq-76-fk4" secondAttribute="width" id="YBs-ET-LNM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ycz-Pt-7hH" secondAttribute="trailing" id="if8-rY-4Iy"/>
+                            <constraint firstItem="2rw-ia-JVn" firstAttribute="trailing" secondItem="lGq-76-fk4" secondAttribute="trailingMargin" id="rYq-5y-c07"/>
+                            <constraint firstItem="ycz-Pt-7hH" firstAttribute="leading" secondItem="lGq-76-fk4" secondAttribute="leadingMargin" id="tRR-4h-fb3"/>
+                            <constraint firstItem="bkm-3j-JLV" firstAttribute="top" secondItem="ycz-Pt-7hH" secondAttribute="bottom" id="xcN-gK-nbj"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Knock Knock" id="8ij-Po-rWD"/>
+                    <connections>
+                        <outlet property="knockKnockLabel" destination="ycz-Pt-7hH" id="NEs-7E-9KJ"/>
+                        <outlet property="knockKnockView" destination="lGq-76-fk4" id="EDp-Ur-MKb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kfq-Xn-oka" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2169" y="-59"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
@@ -173,6 +226,7 @@
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                         <segue destination="0ZW-3m-lLI" kind="relationship" relationship="viewControllers" id="ZNu-c5-LLd"/>
+                        <segue destination="2Uh-Tx-hba" kind="relationship" relationship="viewControllers" id="QR1-fZ-Mky"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>

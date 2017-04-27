@@ -13,14 +13,17 @@ class ViewController: UIViewController {
     @IBOutlet var goodView: UIView!
     @IBOutlet var punView: UIView!
     @IBOutlet var dadView: UIView!
+    @IBOutlet var knockKnockView: UIView!
     
     @IBOutlet weak var goodLabel: UILabel!
     @IBOutlet weak var punLabel: UILabel!
     @IBOutlet weak var dadLabel: UILabel!
+    @IBOutlet weak var knockKnockLabel: UILabel!
     
     var goodSwitched = true
     var punSwitched = true
     var dadSwitched = true
+    var knockKnockCount = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,6 +48,30 @@ class ViewController: UIViewController {
     @IBAction func getDadPunchLine(_ sender: UIButton) {
         jokeSwitch(switched: self.dadSwitched, view: dadView, label: dadLabel, button: sender, joke: "Why do chicken coops only have two doors?", punchline: "Because if they had four, they would be chicken sedans!")
         self.dadSwitched = !self.dadSwitched
+    }
+    
+    @IBAction func knockKnockJoke(_ sender: UIButton) {
+        self.knockKnockLabel.text = ""
+        sender.setTitle("", for: UIControlState.normal)
+        if(self.knockKnockCount == 1) {
+            UIView.transition(with: self.knockKnockView, duration: 0.5, options: UIViewAnimationOptions.transitionFlipFromLeft, animations: nil, completion: {(_ : Bool) -> Void in
+                self.knockKnockLabel.text = "Cow's go"
+                sender.setTitle("Cow's go who?", for: UIControlState.normal)
+            })
+            self.knockKnockCount += 1
+        } else if (self.knockKnockCount == 2) {
+            UIView.transition(with: self.knockKnockView, duration: 0.5, options: UIViewAnimationOptions.transitionFlipFromLeft, animations: nil, completion: {(_ : Bool) -> Void in
+                self.knockKnockLabel.text = "No silly, cows go MOO"
+                sender.setTitle("Back", for: UIControlState.normal)
+            })
+            self.knockKnockCount += 1
+        } else {
+            UIView.transition(with: self.knockKnockView, duration: 0.5, options: UIViewAnimationOptions.transitionFlipFromRight, animations: nil, completion: {(_ : Bool) -> Void in
+                self.knockKnockLabel.text = "Knock Knock"
+                sender.setTitle("Who's there?", for: UIControlState.normal)
+            })
+            self.knockKnockCount = 1
+        }
     }
     
     func jokeSwitch(switched: Bool, view: UIView, label: UILabel, button: UIButton, joke: String, punchline: String) {
